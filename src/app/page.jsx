@@ -6,7 +6,7 @@ export default function Home() {
           <h2 className="text-base font-semibold leading-7 text-gray-900">
             Greybacks FTC Scouting Form
           </h2>
-          <div className="border-b border-gray-900/10 pb-12">
+          <div>
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-3">
                 <label className="block text-sm font-medium leading-6 text-gray-900">
@@ -49,20 +49,19 @@ export default function Home() {
                 </div>
               </div>
 
-              <label className="block text-sm font-medium text-gray-900">
+              <label className="block text-sm font-medium text-gray-900 col-span-3">
                 Autonomous Position
+                <div className="mt-2">
+                  <select
+                    id="autonomous-position"
+                    name="autonomous-position"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm"
+                  >
+                    <option>Towards Backboard</option>
+                    <option>Towards Landing Zone</option>
+                  </select>
+                </div>
               </label>
-              <div className="mt-2">
-                <select
-                  id="autonomous-position"
-                  name="autonomous-position"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm"
-                >
-                  <option>Towards Backboard</option>
-                  <option>Towards Landing Zone</option>
-                </select>
-              </div>
-
               <div className="sm:col-span-3">
                 <label className="block text-sm font-medium leading-6 text-gray-900">
                   Drone
