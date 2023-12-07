@@ -155,13 +155,12 @@ export default function Home() {
             >
               Cancel
             </button>
-            <button
+            <div
               type="submit"
               className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
-              href="/api/add-data/route.ts"
             >
               Save
-            </button>
+            </div>
           </div>
         </div>
       </div>
