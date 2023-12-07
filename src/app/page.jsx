@@ -22,15 +22,31 @@ export default function Home() {
                 </div>
               </div>
 
+              <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div className="sm:col-span-3">
+                  <label className="block text-sm font-medium leading-6 text-gray-900">
+                    Team Name
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      type="text"
+                      name="team-name"
+                      id="team-name" //id
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div>
+              </div>
+
               <div className="sm:col-span-3">
                 <label className="block text-sm font-medium leading-6 text-gray-900">
-                  Qualification Number
+                  Qualification Match Number
                 </label>
                 <div className="mt-2">
                   <input
                     type="text"
                     name="qualification-number"
-                    id="qualification-number"
+                    id="qualification-number" //id
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -43,7 +59,7 @@ export default function Home() {
                   <input
                     type="text"
                     name="cycles"
-                    id="cycles"
+                    id="cycles" //id
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -68,9 +84,9 @@ export default function Home() {
                 </label>
                 <div className="mt-2">
                   <select
-                    id="drone"
                     name="drone"
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm sm:leading-6"
+                    id="drone" //id
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm  sm:max-w-xs sm:text-sm sm:leading-6"
                   >
                     <option>N/A (+0 Points)</option>
                     <option>Landing Zone 1 (+30 Points)</option>
@@ -82,13 +98,31 @@ export default function Home() {
 
               <div className="sm:col-span-3">
                 <label className="block text-sm font-medium leading-6 text-gray-900">
+
+              <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div className="col-span-full">
+                  <label className="block text-sm font-medium leading-6 text-gray-900">
+                    Additional Notes
+                  </label>
+                  <div className="mt-2">
+                    <textarea
+                      name="notes"
+                      id="notes" //id
+                      rows={10}
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                      defaultValue={""}
+                    />
+                  </div>
+                </div>
+              </div>
+
                   Climb Time
                 </label>
                 <div className="mt-2">
                   <input
                     type="text"
-                    name="climb-time"
-                    id="climb-time"
+                    name="climb"
+                    id="climb"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6"
                   />
                 </div>
