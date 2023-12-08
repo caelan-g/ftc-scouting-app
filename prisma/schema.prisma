@@ -1,11 +1,20 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("POSTGRES_PRISMA_URL")
+  url      = env("DATABASE_URL")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model robotdata {
+  id                 Int     @id @default(autoincrement())
+  teamid             Int     @unique
+  name               String? @db.VarChar(255)
+  climb              Boolean?
+  drone              Boolean?
+  cycles             Int?
+  autonomousposition String?  @db.VarChar(255)
+  notes              String?  @db.VarChar(255)
 }
